@@ -1,0 +1,16 @@
+
+ <!-- <h2>{{ myname }}</h2> -->
+
+<!-- <img src="../../../asserts/Rajini.jfif" alt="">  -->
+
+<h3>{{myname}}</h3>
+<!-- property binding -->
+<img [src]="imgPath" [alt]="imgName">
+<!-- event binding -->
+<hr>
+<button type="button" (click)="Greeting()">Click On Me</button>
+<hr>
+<!-- use of ngModel -->
+ <form>
+    <input type="text" name="txt1" [(ngModel)]="mydata"> {{mydata}}
+ </form>

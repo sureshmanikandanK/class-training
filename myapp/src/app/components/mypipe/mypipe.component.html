@@ -1,0 +1,31 @@
+<p class="text-primary bg-info">mypipe works!</p>
+<h2>{{msg}}</h2>
+
+
+<!-- Use of json -->
+
+<p>{{emp | json}}</p>
+<!-- Number pipe -->
+
+<p>{{564}}</p>
+<p>{{564 | number:"3.5-6"}}</p>
+<p>{{0.567| number:"3.5-6"}}</p>
+<p>{{0.567| number:"3.5-6"}}</p>
+
+<!-- use of date file -->
+
+<p>{{dateObj}}</p>
+<p>{{dateObj | date}}</p>
+<p>{{dateObj | date:"shortDate"}}</p>
+<p>{{dateObj | date:"longDate"}}</p>
+
+
+<!-- currency pipe -->
+
+<p>{{100 | currency}}</p>
+<p>{{100 | currency:"GBP"}}</p>
+<p>{{100 | currency:"INR"}}</p>
+
+<p>Cube of 5 is: {{5 | cube}}</p>
+<p>square of 5 is: {{5 | square}}</p>
+<p>Area of circle which radius is 5 : {{5 | areaOfcircle}}sq.unit</p>
