@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            border: 2px solid black;
+            font-size: medium;
+            text-align: center;
+            margin: auto;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        #d7 {
+            text-align: center;
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <center><img src="../asserts/Images/Rajini.jfif" id="img1" alt="Rajini"> <br>
+        <b>Result:</b>
+        <b id="imgname"></b>
+    </center>
+
+
+    <button type="button" onclick="changeimage1()">Rajini</button>
+    <button type="button" onclick="changeimage2()">Dhoni</button>
+    <button type="button" onclick="changeimage3()">Rdj</button>
+    <button type="button" onclick="changeimage4()">Prabhas</button>
+    <button type="button" onclick="changeimage5()">Vijay</button>
+    <button type="button" onclick="changeimage6()">Ajith</button>
+    <br>
+    <h1 id="d7"></h1>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+    <div id="d6"></div>
+
+
+    <script>
+        function changeimage1() {
+            document.getElementById("img1").src = "../asserts/Images/Rajini.jfif";
+            document.getElementById("imgname").innerHTML = "Rajini";
+        }
+        function changeimage2() {
+            document.getElementById("img1").src = "../asserts/Images/Dhoni.jfif";
+            document.getElementById("imgname").innerHTML = "Dhoni";
+        }
+        function changeimage3() {
+            document.getElementById("img1").src = "../asserts/Images/Rdj.jfif";
+            document.getElementById("imgname").innerHTML = "Rdj";
+        }
+        function changeimage4() {
+            document.getElementById("img1").src = "../asserts/Images/Prabhas.jfif";
+            document.getElementById("imgname").innerHTML = "Prabhas";
+        }
+        function changeimage5() {
+            document.getElementById("img1").src = "../asserts/Images/Vijay.jfif";
+            document.getElementById("imgname").innerHTML = "Vijay";
+        }
+        function changeimage6() {
+            document.getElementById("img1").src = "../asserts/Images/Ajith.jfif";
+            document.getElementById("imgname").innerHTML = "Ajith";
+        }
+
+
+        function myclock1() {
+            let mytime = new Date();
+            document.getElementById("d7").innerHTML = mytime.toLocaleTimeString();
+
+        }
+        setInterval(myclock1, 1000);
+
+        let dateObj = new Date();
+        document.getElementById("d4").innerHTML= dateObj.getMonth();
+        
+        let ThisMonth = dateObj.getMonth();{
+            switch(ThisMonth){
+                case 0:{
+                    document.getElementById("d4").innerHTML = "Jan";
+                    break;
+                }
+                case 1:{
+                    document.getElementById("d4").innerHTML = "Feb";
+                    break;
+                }
+                case 2:{
+                    document.getElementById("d4").innerHTML = "Mar";
+                    break;
+                }
+                case 3:{
+                    document.getElementById("d4").innerHTML = "Apr";
+                    break;
+                }
+                case 4:{
+                    document.getElementById("d4").innerHTML = "MAy";
+                    break;
+                }
+                case 5:{
+                    document.getElementById("d4").innerHTML = "Jun";
+                    break;
+                }
+                case 6:{
+                    document.getElementById("d4").innerHTML = "Aug";
+                    break;
+                }
+                case 6:{
+                    document.getElementById("d4").innerHTML = "Sep";
+                    break;
+                }
+                case 6:{
+                    document.getElementById("d4").innerHTML = "Oct";
+                    break;
+                }
+                case 6:{
+                    document.getElementById("d4").innerHTML = "Nov";
+                    break;
+                }
+                case 6:{
+                    document.getElementById("d4").innerHTML = "Dec";
+                    break;
+                }
+               
+            }
+        }
+       
+      
+    </script>
+</body>
+
+</html>

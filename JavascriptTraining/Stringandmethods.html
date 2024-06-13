@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+    <div id="d5"></div>
+    <div id="d6"></div>
+    <div id="d7"></div>
+    <div id="d8"></div>
+    <div id="d9"></div>
+    <div id="d10"></div>
+    <div id="d11"></div>
+    <div id="d12"></div>
+    <div id="d13"></div>
+    <div id="d14"></div>
+    <div id="d15"></div>
+    <div id="d16"></div>
+    <div id="d17"></div>
+    <div id="d18"></div>
+    <div id="d19"></div>
+    <div id="d20"></div>
+    <div id="d21"></div>
+    <div id="d22"></div>
+    <div id="d23"></div>
+    <div id="d24"></div>
+    <div id="d25"></div>
+    <script>
+        //string and its method
+        let msg = "I welcome you all in changepond,You all are changepond employees.";
+        document.getElementById("d1").innerHTML = msg;
+        document.getElementById("d2").innerHTML = msg.toLocaleUpperCase();
+        document.getElementById("d3").innerHTML = msg.toLocaleLowerCase();
+        document.getElementById("d4").innerHTML = msg.length;
+
+
+        //use of indexof methods
+
+        document.getElementById("d5").innerHTML = msg.indexOf("changepond");
+        document.getElementById("d6").innerHTML = msg.indexOf("changepond", 25);
+        document.getElementById("d7").innerHTML = msg.indexOf("Changepond", 25);
+        document.getElementById("d8").innerHTML = msg.lastIndexOf("changepond");
+        document.getElementById("d9").innerHTML = msg.lastIndexOf("changepond", 25);
+
+        //use of search methods
+        document.getElementById("d10").innerHTML = `msg.search("you") : ${msg.search("you")}`;
+
+        //use of slice methods
+        document.getElementById("d11").innerHTML = msg.slice(10, 20);
+        document.getElementById("d12").innerHTML = msg.slice(-21, -5);
+
+        //use of substring methods
+        document.getElementById("d13").innerHTML = msg.substring(10, 20);
+        document.getElementById("d14").innerHTML = msg.substring(15, 66);
+
+        //use of substr methods
+        document.getElementById("d15").innerHTML = msg.substr(10, 20);
+        document.getElementById("d16").innerHTML = msg.substr(15, 66);
+
+        //use of split
+
+        document.getElementById("d17").innerHTML = msg.substr(15, 66);
+        console.log(msg);
+        console.log(msg.split());
+
+        //use of replace
+        document.getElementById("d18").innerHTML = msg.replace("changepond", "Tcs");
+        document.getElementById("d19").innerHTML = msg.replaceAll("changepond", "Tcs");
+
+        //use of charAt
+        document.getElementById("d20").innerHTML = msg.charAt(0);
+        
+
+
+
+    </script>
+</body>
+
+</html>

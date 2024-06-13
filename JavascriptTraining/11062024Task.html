@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Replace Example</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.Text {
+    background-color: darkgray;
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.control-box {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    background-color: aqua;
+    width: 200px;
+    height: 30px;
+    margin: 10px 0;
+    padding: 5px;
+    border: 2px solid black;
+}
+
+button {
+    width: 100px;
+    height: 25px;
+    margin: 10px 0;
+    border: 2px solid black;
+    background-color: beige;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="Text" id="big-box">Text</div>
+        <div class="control-box">
+            <input type="text" id="input-text" placeholder="Enter text to replace">
+            <button id="replace-text">Replace Text</button>
+            <input type="text" id="input-all-text" placeholder="Enter text to replace all">
+            <button id="replace-all-text">Replace All</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('replace-text').addEventListener('click', function() {
+    var text = document.getElementById('input-text').value;
+    if (text) {
+        document.getElementById('big-box').innerHTML = text;
+    }
+});
+
+document.getElementById('replace-all-text').addEventListener('click', function() {
+    var allText = document.getElementById('input-all-text').value;
+    if (allText) {
+        document.getElementById('big-box').innerHTML = allText;
+       
+        
+    }
+});
+
+    </script>
+</body>
+</html>

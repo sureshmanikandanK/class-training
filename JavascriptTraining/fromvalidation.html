@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./formvalidation.css">
+    <script src="./formAfter.js"></script>
+</head>
+<body>
+    <form class="box" name="myform" onsubmit=" return checkAll()">
+        <div><label for="fname">Enter your first name: </label>
+            <input type="text" name="fname" id="fname"><br><br>
+           
+
+   <div>
+    <label>Select Qualification : </label><br>
+    <input type="checkbox" name="edu" value="ssc">ssc
+    <input type="checkbox" name="edu" value="hsc">hsc
+    <input type="checkbox" name="edu" value="Ug">Ug
+    <input type="checkbox" name="edu" value="Pg">Pg
+   </div>
+   <div>
+    <label>Select Qualification : </label><br>
+    <input type="radio" name="gender" value="Male">Male
+    <input type="radio" name="gender" value="Female">Female
+    <input type="radio" name="gender" value="Others">Others
+  
+   </div>
+
+
+   <button type="submit">Submit</button></div>
+    </form>
+</body>
+</html>
