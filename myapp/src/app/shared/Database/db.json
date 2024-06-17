@@ -1,0 +1,51 @@
+{
+  "product": [
+    {
+      "id": "3",
+      "pname": "Mouse",
+      "price": 500,
+      "company": "Sony"
+    },
+    {
+      "id": "6",
+      "pname": "Cable",
+      "price": 70,
+      "company": "Dell"
+    },
+    {
+      "id": "a232",
+      "pname": "Keyboard",
+      "price": "57",
+      "company": "Hp"
+    },
+    {
+      "id": "9046",
+      "pname": "Keyboard",
+      "price": "57",
+      "company": "Hp"
+    },
+    {
+      "id": "b22b",
+      "pname": "Keyboard",
+      "price": "77",
+      "company": "Dell"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "uname": "Admin",
+      "upass": "Admin@123"
+    },
+    {
+      "id": "2",
+      "uname": "Trainee",
+      "upass": "Trainee@123"
+    },
+    {
+      "id": "3",
+      "uname": "Employee",
+      "upass": "Emp@123"
+    }
+  ]
+}

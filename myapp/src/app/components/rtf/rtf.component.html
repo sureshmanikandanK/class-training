@@ -1,0 +1,33 @@
+<p>rtf works!</p>
+<form [formGroup]="userForm" (ngSubmit)="getData()">
+    <label class="form-label">Enter your name</label>
+    <input type="text" name="fname" formControlName="fname" class="form-control">
+    <div class="alert alert-danger" *ngIf="userForm.get('fname').touched && userForm.get('fname').invalid">
+        <div *ngIf="userForm.get('fname').errors.required">This field is required</div>
+        <div *ngIf="userForm.get('fname').errors.pattern">Fname must contain A-Z</div>
+    </div>
+    <label>Enter your password</label>
+    <input type="text" name="Userpassword" formControlName="Userpassword" class="form-control">
+    <div class="alert alert-danger"
+        *ngIf="userForm.get('Userpassword').touched && userForm.get('Userpassword').invalid">
+        <div *ngIf="userForm.get('Userpassword').errors.required">Password is required</div>
+        <div *ngIf="userForm.get('Userpassword').errors.pattern">Password doesn't meet the requirment</div>
+    </div>
+    <label>Enter your email</label>
+    <input type="text" name="email" formControlName="uemail" class="form-control">
+    <div class="alert alert-danger" *ngIf="userForm.get('uemail').touched && userForm.get('uemail').invalid">
+        <div *ngIf="userForm.get('uemail').errors.required">Password is required</div>
+        <div *ngIf="userForm.get('uemail').errors.pattern">Password doesn't meet the requirment</div>
+    </div>
+    <div class="form-group"></div>
+    <label class="form-check-label">
+        <input type="checkbox" name="term" formControlName="term" class="form-check-label">
+         Accept the Conditions
+        </label>
+    <div class="alert alert-danger" *ngIf="userForm.get('term').touched && userForm.get('term').invalid">
+        <div *ngIf="userForm.get('term').errors.requiredTrue">Must check it</div>
+    </div><br>
+
+
+    <button type="submit" class="btn btn-primary mt-2" [disabled]="userForm.invalid">submit</button>
+</form>
