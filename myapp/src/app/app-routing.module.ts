@@ -12,11 +12,16 @@ import { FoodListComponent } from './components/food-list/food-list.component';
 import { ProductDashboardComponent } from './curd/product-dashboard/product-dashboard.component';
 import { ProductAddComponent } from './curd/product-add/product-add.component';
 import { ProductUpdateComponent } from './curd/product-update/product-update.component';
+import { MyangularMaterialComponent } from './components/myangular-material/myangular-material.component';
+import { LoginComponent } from './components/login/login.component';
+import { authGuard } from './shared/Guards/auth.guard';
 
 
 const routes: Routes = [
   // default routing
-  { path: "maindashboard", component: MainDashboardComponent,children:[
+  { path: "", component: LoginComponent },
+  { path: "Login", component: LoginComponent },
+  { path: "maindashboard", component: MainDashboardComponent, canActivate:[authGuard], children:[
     // Redirect routing
   {path:"",redirectTo:"databinding",pathMatch:"full"},
 
@@ -31,6 +36,8 @@ const routes: Routes = [
   { path: "Productdash", component: ProductDashboardComponent },
   { path: "ProductAdd", component: ProductAddComponent },
   { path: "ProductUpdate/:id", component: ProductUpdateComponent },
+  { path: "AngularMaterial", component: MyangularMaterialComponent },
+ 
 
   //child routing
   { path: "angform", component: AngFormComponent, children:[
@@ -43,7 +50,7 @@ const routes: Routes = [
   
 
   // wild card rounting
-  { path: "**", component: PagenotfoundComponent }
+  { path: "**", component: LoginComponent }
 ];
 
 @NgModule({

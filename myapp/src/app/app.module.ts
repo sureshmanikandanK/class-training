@@ -26,7 +26,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductDashboardComponent } from './curd/product-dashboard/product-dashboard.component';
 import { ProductAddComponent } from './curd/product-add/product-add.component';
 import { ProductUpdateComponent } from './curd/product-update/product-update.component';
-
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MyangularMaterialComponent } from './components/myangular-material/myangular-material.component';
+import {MatButtonModule} from '@angular/material/button';
+import { LoginComponent } from './components/login/login.component';
+import { SignoutComponent } from './components/signout/signout.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +55,9 @@ import { ProductUpdateComponent } from './curd/product-update/product-update.com
     ProductDashboardComponent,
     ProductAddComponent,
     ProductUpdateComponent,
+    MyangularMaterialComponent,
+    LoginComponent,
+    SignoutComponent,
  
     
   ],
@@ -59,10 +66,13 @@ import { ProductUpdateComponent } from './curd/product-update/product-update.com
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule,
+
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })
