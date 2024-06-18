@@ -6,6 +6,8 @@ import MyDetails from './components/MyDetails';
 import MethodEventComp from './components/MethodEvent';
 import SetStateComp from './components/SetStateComp';
 import ConditionRenComp from './components/ConditionRenComp';
+import MyImagesComp from './components/MyImages';
+import ParentComp from './components/ParentComp';
 
 function App() {
   return (
@@ -30,7 +32,9 @@ function App() {
       <MyDetails fname="Sureshmanikandan" lname="K" email="Sureshmk@gmail.com" contact="99999999" /> */}
       {/* <MethodEventComp /> */}
       {/* <SetStateComp /> */}
-      <ConditionRenComp />
+      {/* <ConditionRenComp /> */}
+      {/* <MyImagesComp /> */}
+      <ParentComp />
     </div>
   );
 }
