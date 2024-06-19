@@ -8,6 +8,13 @@ import SetStateComp from './components/SetStateComp';
 import ConditionRenComp from './components/ConditionRenComp';
 import MyImagesComp from './components/MyImages';
 import ParentComp from './components/ParentComp';
+import ToggleImage from './Task/ToggleImage';
+import MultiImgComp from './Task/MultiImage';
+import MyCssComp from './components/MyCssComp';
+import ClickCounterComp from './components/ClickCounterComp';
+import HoverCounterComp from './components/HoverCounterComp';
+import MySliderComp from './components/MySliderComp';
+import router from './routing/routing';
 
 function App() {
   return (
@@ -35,6 +42,13 @@ function App() {
       {/* <ConditionRenComp /> */}
       {/* <MyImagesComp /> */}
       <ParentComp />
+      {/* <MyCssComp /> */}
+      {/* <ClickCounterComp />
+      <HoverCounterComp /> */}
+      <MySliderComp />
+      {/* <ToggleImage /> */}
+      {/* <MultiImgComp /> */}
+      <router />
     </div>
   );
 }

@@ -31,6 +31,7 @@ import { MyangularMaterialComponent } from './components/myangular-material/myan
 import {MatButtonModule} from '@angular/material/button';
 import { LoginComponent } from './components/login/login.component';
 import { SignoutComponent } from './components/signout/signout.component';
+import { MultiImageComponent } from './shared/Task/multi-image/multi-image.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +59,7 @@ import { SignoutComponent } from './components/signout/signout.component';
     MyangularMaterialComponent,
     LoginComponent,
     SignoutComponent,
+    MultiImageComponent,
  
     
   ],

@@ -1,0 +1,14 @@
+<p>selectlist works!</p>
+<div>
+    <button (click)="toggleDisplay(true)">Show Car List</button>
+    <button (click)="toggleDisplay(false)">Show Bike List</button>
+ 
+    <ul *ngIf="displayCars">
+      <li *ngFor="let car of cars" (click)="selectVehicle(car)">{{ car }}</li>
+    </ul>
+    <ul *ngIf="!displayCars">
+      <li *ngFor="let bike of bikes" (click)="selectVehicle(bike)">{{ bike }}</li>
+    </ul>
+ 
+    <p *ngIf="selectedVehicle">You have selected: {{ selectedVehicle }}</p>
+  </div>
