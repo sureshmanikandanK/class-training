@@ -8,6 +8,11 @@ import UseStateHookComp from "../Hooks/UseStateHookComp";
 import UseEffectHookComp from "../Hooks/UseEffectHookComp";
 import MaindashboardComp from "../Layout/MaindashboardComp";
 import NavComp from "../Layout/NavComp";
+import VirtualDomComp from "../components/VirtualDomComp";
+import FormValComp from "../components/FormValComp";
+import ProductDashboardComp from "../CRUD/ProductDashboardComp";
+import ProductAddComp from "../CRUD/ProductAddComp";
+import ProductUpdateComp from "../CRUD/ProductUpdateComp";
 
 
 const router = createBrowserRouter([
@@ -16,9 +21,14 @@ const router = createBrowserRouter([
         // {path:"Copyright",element:</>},
         {path:"",element:<MySliderComp/>},
         {path:"myslider",element:<MySliderComp/>},
+        {path:"ProductDashboard",element:<ProductDashboardComp/>},
+        {path:"ProductUpdate",element:<ProductUpdateComp/>},
+        {path:"ProductAdd",element:<ProductAddComp/>},
         {path:"myimages",element:<MyImagesComp/>},
         {path:"parent/:id",element:<ParentComp/>},
         {path:"parent",element:<ParentComp/>},
+        {path:"FormValComp",element:<FormValComp/>},
+        {path:"VirtualDom",element:<VirtualDomComp/>},
         {path:"UseState",element:<UseStateHookComp/>},
         {path:"ReactHooks",element:<ReactHooksComp />,children:[
             {path:"UseState",element:<UseStateHookComp/>},

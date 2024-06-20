@@ -24,7 +24,7 @@ export const mainListItems = (
       <ListItemIcon>
         <ShoppingCartIcon />
       </ListItemIcon>
-      <Link to="myimages" className='btn btn-primary' >Images</Link> &nbsp;
+      <Link to="myimages" className='btn btn-danger' >Images</Link> &nbsp;
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
@@ -36,13 +36,13 @@ export const mainListItems = (
       <ListItemIcon>
         <BarChartIcon />
       </ListItemIcon>
-      <Link to="UseState" className='btn btn-primary' >UseState</Link> &nbsp;
+      <Link to="UseState" className='btn btn-secondary' >UseState</Link> &nbsp;
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
         <LayersIcon />
       </ListItemIcon>
-      <Link to="ReactHooks" className='btn btn-primary' >ReactHooks</Link> &nbsp;
+      <Link to="ReactHooks" className='btn btn-danger' >ReactHooks</Link> &nbsp;
     </ListItemButton>
   </React.Fragment>
 );
@@ -56,7 +56,7 @@ export const secondaryListItems = (
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
-      <Link to="UseEffect" className='btn btn-primary' >UseEffect</Link> &nbsp;
+      <Link to="UseEffect" className='btn btn-secondary' >UseEffect</Link> &nbsp;
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
@@ -68,7 +68,25 @@ export const secondaryListItems = (
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
-      <Link to="myimages" className='btn btn-primary' >UseEffect</Link> &nbsp;
+      <Link to="VirtualDom" className='btn btn-danger' >VirtualDom</Link> &nbsp;
+    </ListItemButton>
+    <ListItemButton>
+      <ListItemIcon>
+        <AssignmentIcon />
+      </ListItemIcon>
+      <Link to="FormValComp" className='btn btn-primary' >FormValComp</Link> &nbsp;
+    </ListItemButton>
+    {/* <ListItemButton>
+      <ListItemIcon>
+        <AssignmentIcon />
+      </ListItemIcon>
+      <Link to="ProductAdd" className='btn btn-danger' >ProductAdd</Link> &nbsp;
+    </ListItemButton> */}
+    <ListItemButton>
+      <ListItemIcon>
+        <AssignmentIcon />
+      </ListItemIcon>
+      <Link to="ProductDashboard" className='btn btn-danger' >CRUD</Link> &nbsp;
     </ListItemButton>
   </React.Fragment>
 );
