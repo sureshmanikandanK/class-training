@@ -1,30 +1,39 @@
 import axios from 'axios';
-import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import { useNavigate, useParams } from 'react-router-dom';
 
-const ProductUpdateComp = () => {const nav = useNavigate();
-    const[productData,setProductData] = useState({
-        pname:"",
-        price:"",
-        company:""
+const ProductUpdateComp = () => {
+    const { id } = useParams();
+    const nav = useNavigate();
+    const [productData, setProductData] = useState({
+        id: "",
+        pname: "",
+        price: "",
+        company: ""
     });
 
-    const inputChange = (events) =>{
-        
-        const{type,name,value} = events.target;
-    setProductData({...productData,[name]:value})
+    const inputChange = (events) => {
+
+        const { type, name, value } = events.target;
+        setProductData({ ...productData, [name]: value })
     }
-    const addProduct = (event) =>{
+    const addProduct = (event) => {
         event.preventDefault();
-        axios.post(`http://localhost:8888/products`,productData).then(()=>{
-            window.alert("Record Added Successfully");
+        axios.put(`http://localhost:8888/products/${id}`, productData).then(() => {
+            window.alert("Record Updated Successfully");
             nav('/Maindashboard/ProductDashboard')
-        }).catch((error)=>{})
+        }).catch((error) => { })
 
     }
+    useEffect(() => {
+        axios.get(`http://localhost:8888/products/${id}`).then((res) => {
+            // console.log(res.data);
+            setProductData(res.data);
+        }).catch((error) => { })
+    }, [])
     return (
         <div>
-            <h2>This is ProductAdd Component</h2>
+            <h2>This is ProductUpdate Component</h2>
             <div className='row'>
                 <div className='col-sm-3'></div>
                 <div className='col-sm-6'>

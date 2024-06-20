@@ -13,16 +13,19 @@ import FormValComp from "../components/FormValComp";
 import ProductDashboardComp from "../CRUD/ProductDashboardComp";
 import ProductAddComp from "../CRUD/ProductAddComp";
 import ProductUpdateComp from "../CRUD/ProductUpdateComp";
+import LoginPage from "../Layout/LoginPage";
 
 
 const router = createBrowserRouter([
+    {path:"",element:<LoginPage/>},
+    {path:"Login",element:<LoginPage/>},
     {path:"Maindashboard",element:<MaindashboardComp/>,children:[
         {path:"nav",element:<NavComp/>},
         // {path:"Copyright",element:</>},
         {path:"",element:<MySliderComp/>},
         {path:"myslider",element:<MySliderComp/>},
         {path:"ProductDashboard",element:<ProductDashboardComp/>},
-        {path:"ProductUpdate",element:<ProductUpdateComp/>},
+        {path:"ProductUpdate/:id",element:<ProductUpdateComp/>},
         {path:"ProductAdd",element:<ProductAddComp/>},
         {path:"myimages",element:<MyImagesComp/>},
         {path:"parent/:id",element:<ParentComp/>},

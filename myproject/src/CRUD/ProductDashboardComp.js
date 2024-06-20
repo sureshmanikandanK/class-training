@@ -48,7 +48,7 @@ const ProductDashboardComp = () => {
                             <td>{val.price}</td>
                             <td>{val.company}</td>
                             <td>
-                            <Link to="/Maindashboard/ProductUpdate" className='btn btn-primary btn-sm' ><EditNoteOutlinedIcon /> </Link>
+                            <Link to={`/Maindashboard/ProductUpdate/${val.id}`} className='btn btn-primary btn-sm' ><EditNoteOutlinedIcon /> </Link>
                                 <button type='button' onClick={()=>{DeleteProduct(val.id)}} className='btn btn-outline-success btn-sm'>
                                     <DeleteOutlineOutlinedIcon></DeleteOutlineOutlinedIcon>
                                 </button>
