@@ -13,6 +13,7 @@ import NavComp from "../Layout/NavComp";
 const router = createBrowserRouter([
     {path:"Maindashboard",element:<MaindashboardComp/>,children:[
         {path:"nav",element:<NavComp/>},
+        // {path:"Copyright",element:</>},
         {path:"",element:<MySliderComp/>},
         {path:"myslider",element:<MySliderComp/>},
         {path:"myimages",element:<MyImagesComp/>},

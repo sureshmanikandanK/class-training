@@ -10,6 +10,9 @@ const NavComp = () => {
             <Link to="parent" className='btn btn-primary' >Parent</Link> &nbsp;
             <Link to="UseState" className='btn btn-primary' >UseState</Link> &nbsp;
             <Link to="ReactHooks" className='btn btn-primary' >ReactHooks</Link> &nbsp;
+            <Link to="UseEffect" className='btn btn-primary' >UseEffect</Link> &nbsp;
+            <Link to="nav" className='btn btn-primary' >Nav</Link> &nbsp;
+            <Link to="myimages" className='btn btn-primary' >UseEffect</Link> &nbsp;
             
             
         </div>

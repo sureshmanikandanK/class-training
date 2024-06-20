@@ -19,10 +19,10 @@ class MyImagesComp extends Component {
         return <div>
             <h2>This is Image Component</h2>
             <img src={images} alt="nature" height="100%" width="100%" />{" "} &nbsp;
-            <img src={image1} alt="nature" height="200px" width="200px" />
+            {/* <img src={image1} alt="nature" height="200px" width="200px" /> */}
             <hr />
-            <img src={staticData.mountain} alt="Mountain" height="200px" width="200px" />{" "} &nbsp;
-            <img src={staticData.Panda} alt="Mountain" height="200px" width="200px" />
+            {/* <img src={staticData.mountain} alt="Mountain" height="200px" width="200px" />{" "} &nbsp; */}
+            {/* <img src={staticData.Panda} alt="Mountain" height="200px" width="200px" /> */}
             <hr />
             <video src={staticData.sampleVideo } controls />
                 </div>
