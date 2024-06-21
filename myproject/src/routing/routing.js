@@ -14,12 +14,18 @@ import ProductDashboardComp from "../CRUD/ProductDashboardComp";
 import ProductAddComp from "../CRUD/ProductAddComp";
 import ProductUpdateComp from "../CRUD/ProductUpdateComp";
 import LoginPage from "../Layout/LoginPage";
+import SignOut from "../Layout/Signout";
+import ProtectedRoutingComp from "./ProtectedRoutingComp";
 
 
 const router = createBrowserRouter([
     {path:"",element:<LoginPage/>},
     {path:"Login",element:<LoginPage/>},
-    {path:"Maindashboard",element:<MaindashboardComp/>,children:[
+    {path:"SignOut",element:<SignOut/>},
+    {path:"SignOut/:id",element:<LoginPage/>},
+    {path:"Maindashboard",
+        // element:<MaindashboardComp/>
+        element:<ProtectedRoutingComp Component={MaindashboardComp}/>,children:[
         {path:"nav",element:<NavComp/>},
         // {path:"Copyright",element:</>},
         {path:"",element:<MySliderComp/>},
@@ -27,6 +33,7 @@ const router = createBrowserRouter([
         {path:"ProductDashboard",element:<ProductDashboardComp/>},
         {path:"ProductUpdate/:id",element:<ProductUpdateComp/>},
         {path:"ProductAdd",element:<ProductAddComp/>},
+        {path:"SignOut",element:<SignOut/>},
         {path:"myimages",element:<MyImagesComp/>},
         {path:"parent/:id",element:<ParentComp/>},
         {path:"parent",element:<ParentComp/>},

@@ -15,6 +15,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useState } from 'react';
+import staticData from '../shared/constant/ConstantData';
 
 const defaultTheme = createTheme();
 
@@ -34,7 +35,8 @@ const LoginPage = () => {
                 return val.userId===email && val.userPass===password 
             });
             if(data.length > 0){
-                nav("/Maindashboard")
+                nav("/Maindashboard");
+                sessionStorage.setItem("user",email)
 
             }else{
                 window.alert("Wrong UserId or Password");
@@ -46,15 +48,17 @@ const LoginPage = () => {
       };
     return (
         <ThemeProvider theme={defaultTheme}>
-        <Grid container component="main" sx={{ height: '100vh' }}>
+        <Grid item xs={12} sm={12} md={12} container component="main" sx={{ height: '100vh' }}>
+        <img src={staticData.color} alt="Mountain" height="300px" width="100%" />
           <CssBaseline />
           <Grid
+         
             item
-            xs={false}
-            sm={4}
-            md={7}
+            xs={12}
+            sm={12}
+            md={12}
             sx={{
-              backgroundImage: 'url(https://source.unsplash.com/random?wallpapers)',
+              backgroundImage: '',
               backgroundRepeat: 'no-repeat',
               backgroundColor: (t) =>
                 t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
@@ -62,7 +66,7 @@ const LoginPage = () => {
               backgroundPosition: 'center',
             }}
           />
-          <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+          <Grid item xs={12} sm={12} md={12} component={Paper} elevation={6} square>
             <Box
               sx={{
                 my: 8,
